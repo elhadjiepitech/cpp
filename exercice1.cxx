@@ -26,24 +26,16 @@
 
 #include <iostream>
 
-int saisirDimension(const char* dimension) {
-	int valeur;
-	while ((std::cout << "Veuillez saisir " << dimension << " du rectangle: ") && (!(std::cin >> valeur) || (valeur <= 0) || (valeur > 10)))
-	{
-		std::cerr << dimension << " doit être un entier positif et inférieur ou égal à 10!\n";
-		std::cin.clear();
-		std::cin.ignore(10000, '\n');
-	}
-	return valeur;
-}
 
 int main()
 {
-	int longueur = saisirDimension("la longueur");
-	int largeur = saisirDimension("la largeur");
-
-	std::cout << "Le périmètre du rectangle est: " << 2 * (largeur + longueur) << std::endl;
-	std::cout << "La surface du rectangle est: " << largeur * longueur << std::endl;
+	int largeur, longueur;
+	std::cout << "Entrez la largeur du rectangle : "<< std::endl;
+	std::cin >> largeur;
+	std::cout << "Entrez la longueur du rectangle : "<< std::endl;
+	std::cin >> longueur;
+	std::cout << "Le périmètre du rectangle est : " << 2 * (largeur + longueur) << std::endl;
+	std::cout << "La surface du rectangle est : " << largeur * longueur << std::endl;
 
 	return 0;
 }
