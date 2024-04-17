@@ -1,6 +1,6 @@
 FROM ubuntu:latest
-COPY ./exercice1.cxx /exercice1.cxx
+COPY ./exercice2.cxx /exercice2.cxx
 RUN apt-get update && apt-get install -y g++
-RUN g++ /exercice1.cxx -o /exercice1
-CMD ["/exercice1"]
+RUN g++ /exercice2.cxx -o /exercice2
+CMD ["/exercice2"]
 
